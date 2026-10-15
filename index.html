@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Jungle Design Industries · El ascensor</title>
+    <link rel="stylesheet" href="dist/css/app.css">
+</head>
+<body>
+
+    <header class="site_header">
+    <div class="wrap lateral-padding">
+        <!-- ⚠️ PROVISIONAL: texto en serif hasta tener el logo de JDI en SVG -->
+        <a href="#" class="brand" data-goto="0" data-finger>Jungle Design Industries.</a>
+        <!-- sin menú de plantas: se navega con el ascensor (backup del menú en reference/backups/header_pre_sin_menu_2026-10-14.php) -->
+    </div>
+</header>
+
+        <main class="home">
+            <section class="jdi_building" data-building>
+    <!-- vídeo de la cámara: a pantalla completa DEBAJO del lienzo (no se ve; así Chrome no lo pausa) -->
+    <video class="jb_cam" data-head-video playsinline muted autoplay aria-hidden="true"></video>
+    <canvas class="jb_canvas" data-building-canvas aria-label="El edificio de JDI: vestíbulo, ascensor y cuatro plantas"></canvas>
+
+    <!-- ⚠️ PROPUESTA: controles, se atenúan en cuanto empiezas a moverte -->
+    <div class="jb_keys" data-hint>
+        <span class="is-desk"><kbd>Clic</kbd>mirar con el ratón</span>
+        <span class="is-desk"><kbd>W A S D</kbd>caminar</span>
+        <span class="is-desk"><kbd>← →</kbd>girar</span>
+        <span class="is-desk"><kbd>Shift</kbd>correr</span>
+        <span class="is-desk"><kbd>Clic</kbd>usar</span>
+        <span class="is-desk"><kbd>Esc</kbd>soltar el ratón</span>
+        <span class="is-touch"><kbd>Izquierda</kbd>caminar</span>
+        <span class="is-touch"><kbd>Derecha</kbd>mirar</span>
+        <span class="is-touch"><kbd>Toca</kbd>usar</span>
+    </div>
+
+    <!-- etiqueta flotante del objeto señalado -->
+    <div class="jb_tip" data-tip aria-hidden="true"><strong data-tip-title></strong><span data-tip-meta></span></div>
+
+    <div class="jb_hud lateral-padding">
+        <div class="jb_actions">
+            <button class="pill" type="button" data-sound-toggle data-finger><span class="pill_dot"></span><span data-sound-label>Sonido</span></button>
+            <button class="pill" type="button" data-camera-toggle title="El vídeo no se ve, no se graba y no sale de tu navegador"><span class="pill_dot"></span><span data-camera-label>Mirar con la cabeza</span></button>
+        </div>
+    </div>
+
+    <!-- proyecto abierto: vídeo + datos -->
+    <div class="jb_project" data-project role="dialog" aria-modal="true" aria-labelledby="jb_project_title">
+        <div class="jp_media">
+            <video data-project-video playsinline controls preload="none"></video>
+            <div class="jp_placeholder" data-project-placeholder>
+                <span class="jp_num" data-project-num>01</span>
+                <span class="jp_note">Vídeo del proyecto · pendiente</span>
+            </div>
+        </div>
+        <div class="jp_info">
+            <h2 class="jp_title" id="jb_project_title" data-project-title>Proyecto 01</h2>
+            <p class="jp_meta" data-project-meta>Cliente · 2026</p>
+        </div>
+        <button class="pill jp_close" type="button" data-project-close data-finger><span class="pill_dot"></span><span>Volver a la planta</span></button>
+    </div>
+
+    <!-- revista: libro abierto con paso de página; tipografía mínima, todo en blanco -->
+    <div class="jb_mag" data-mag role="dialog" aria-modal="true" aria-label="The Studio, 1893">
+        <div class="jm_book" data-mag-book></div>
+        <div class="jm_foot">
+            <p class="jm_meta"><span data-mag-title>The Studio</span> <span data-mag-meta></span></p>
+            <p class="jm_nav"><button type="button" data-mag-prev>Anterior</button><span class="jm_count" data-mag-count>1 / 1</span><button type="button" data-mag-next>Siguiente</button></p>
+            <p class="jm_end"><span class="jm_credit" data-mag-credit></span><button type="button" data-mag-close>Cerrar</button></p>
+        </div>
+    </div>
+
+    <div class="jb_cross" aria-hidden="true"></div>
+    <div class="jb_flash" data-flash aria-hidden="true"></div>
+</section>
+
+        </main>
+    <script src="dist/js/vendor/three-0.158.0.min.js"></script>
+    <script src="dist/data/projects.js"></script>
+    <script src="dist/data/covers.js"></script>
+    <script src="dist/data/art.js"></script>
+    <script src="dist/data/media.js"></script>
+    <script src="dist/data/estudio.js"></script>
+    <script src="dist/js/app-min.js"></script>
+</body>
+</html>
+
